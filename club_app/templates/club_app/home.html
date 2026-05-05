@@ -1,0 +1,41 @@
+{% extends 'club_app/base.html' %}
+
+{% block content %}
+{% load static %}
+<div class="dashboard">
+
+    <a href="{% url 'add_event' %}">
+        <div class="card">
+            <h2>Add Event</h2>
+            <p>Create and manage new club events</p>
+        </div>
+    </a>
+
+    <a href="{% url 'view_events' %}">
+        <div class="card">
+            <h2>View Events</h2>
+            <p>See all upcoming and past events</p>
+        </div>
+    </a>
+
+    <a href="{% url 'volunteer' %}">
+        <div class="card">
+            <h2>Register Volunteer</h2>
+            <p>Sign up to participate in events</p>
+        </div>
+    </a>
+
+    <a href="{% url 'view_volunteers' %}">
+        <div class="card">
+            <h2>View Volunteers</h2>
+            <p>Check volunteer availability and details</p>
+        </div>
+    </a>
+
+</div>
+
+<div class="bottom-image">
+    <img src="{% static 'club.jpeg' %}" alt="Club">
+</div>
+
+{% endblock %}

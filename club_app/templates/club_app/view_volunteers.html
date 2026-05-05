@@ -1,0 +1,20 @@
+{% extends 'club_app/base.html' %}
+
+{% block content %}
+<div class="form-container">
+    <h2>Volunteers</h2>
+
+    {% for v in volunteers %}
+        <p>
+            <b>{{ v.name }}</b> ({{ v.usn }}) <br>
+            Event: {{ v.event_name }} <br>
+            Available: {{ v.availability }}
+        </p>
+        <hr>
+    {% empty %}
+        <p>No volunteers are registered yet.</p>
+    {% endfor %}
+
+</div>
+
+{% endblock %}
